@@ -12,8 +12,9 @@
 	"dependencies": {
 		"@emotion/cache": "latest",
 		"@emotion/react": "latest",
-		"@emotion/styled": "latest",
 		"@emotion/server": "latest",
+		"@emotion/styled": "latest",
+		"@mui/icons-material": "^5.1.0",
 		"@mui/material": "latest",
 		"clsx": "latest",
 		"next": "latest",
