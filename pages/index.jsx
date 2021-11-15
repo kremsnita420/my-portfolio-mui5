@@ -4,28 +4,6 @@ import Typography from '@mui/material/Typography'
 import Box from '@mui/material/Box'
 import Layout from '../components/Layout'
 
-import TagCloud from 'TagCloud'
-
-import dynamic from 'next/dynamic'
-
-const myTags = [
-	'JavaScript',
-	'CSS',
-	'HTML',
-	'C',
-	'C++',
-	'React',
-	'Python',
-	'Java',
-	'git',
-	'django',
-	'Node.js',
-	'OpenCV',
-	'GCP',
-	'MySQL',
-	'jQuery',
-]
-
 export default function HomePage() {
 	return (
 		<Layout>
