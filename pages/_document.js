@@ -1,7 +1,7 @@
 /* eslint-disable react/display-name */
 import * as React from 'react';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
-import createEmotionServer from '@emotion/server/create-instance';
+import createEmotionServer from '@emotion/server/types/create-instance';
 import theme from '../src/theme';
 import createEmotionCache from '../src/createEmotionCache';
 
