@@ -1,9 +1,13 @@
-import { useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
+import NextLink from 'next/link'
+import { Box } from '@mui/system'
+import { useRouter } from 'next/router'
 import {
 	AppBar,
 	Button,
 	Container,
 	Drawer,
+	IconButton,
 	Link,
 	Toolbar,
 	Typography,
@@ -11,15 +15,34 @@ import {
 import {
 	ArrowForwardIosOutlined,
 	ArrowBackIosOutlined,
+	WbSunnyIcon,
+	Brightness2Icon,
 } from '@mui/icons-material'
-import NextLink from 'next/link'
-import { Box } from '@mui/system'
-import { useRouter } from 'next/router'
+
 import MenuItems from './MenuItems'
+import { Store } from '../../src/StoreProvider'
+import Cookies from 'js-cookie'
 
 export default function Navbar() {
-	const [sidebarVisible, setSidebarVisible] = useState()
+	//fetch from store provider
+	const { state, dispatch } = useContext(Store)
+	const { darkMode } = state
+	//states
+	const [darkModeState, setDarkModeState] = useState(null)
+	const [sidebarVisible, setSidebarVisible] = useState(false)
+
 	const router = useRouter()
+
+	//darkmode handler
+	const darkModeChangeHandler = () => {
+		dispatch({ type: darkMode ? 'DARK_MODE_OFF' : 'DARK_MODE_ON' })
+		const newDarkMode = !darkMode
+		setDarkModeState(newDarkMode)
+		Cookies.set('darkMode', newDarkMode ? 'ON' : 'OFF')
+	}
+	useEffect(() => {
+		setDarkModeState(darkMode)
+	}, [darkMode])
 
 	//open-close sidebar
 	const sidebarOpenHandler = () => {
@@ -44,6 +67,10 @@ export default function Navbar() {
 					</Typography>
 
 					<Box style={{ flexGrow: '1' }} />
+					{/* darkmode */}
+					<Button size='small' onClick={darkModeChangeHandler} color='inherit'>
+						{darkModeState ? 'light' : 'dark '}
+					</Button>
 
 					{/* main navigation buttons */}
 					<Box sx={{ display: { md: 'block', xs: 'none' } }}>
@@ -57,17 +84,18 @@ export default function Navbar() {
 												letterSpacing: '2px',
 												fontSize: '1.5rem',
 											}}
+											color='secondary'
 											variant='outlined'>
 											{item.label}
 										</Button>
 									) : (
 										<Button
-											color='secondary'
 											sx={{
 												fontFamily: 'Odibee Sans',
 												letterSpacing: '2px',
 												fontSize: '1rem',
-											}}>
+											}}
+											color='secondary'>
 											{item.label}
 										</Button>
 									)}
@@ -81,7 +109,7 @@ export default function Navbar() {
 						<Button
 							sx={{ display: { md: 'none', xs: 'block' } }}
 							edge='end'
-							color='primary'
+							color='secondary'
 							aria-label='open drawer'
 							onClick={sidebarOpenHandler}>
 							<ArrowBackIosOutlined />

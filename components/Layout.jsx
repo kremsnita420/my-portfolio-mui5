@@ -8,8 +8,14 @@ import {
 import classes from '../src/styles'
 
 import Navbar from './header/Appbar'
+import { useContext } from 'react'
+import { Store } from '../src/StoreProvider'
 
 export default function Layout({ title, description, children }) {
+	//fetch from store provider
+	const { state } = useContext(Store)
+	const { darkMode } = state
+
 	const theme = createTheme({
 		components: {
 			MuiLink: {
@@ -19,19 +25,8 @@ export default function Layout({ title, description, children }) {
 			},
 		},
 
-		breakpoints: {
-			values: {
-				xs: 0,
-				sm: 600,
-				md: 900,
-				lg: 1200,
-				xl: 2000,
-			},
-		},
-
 		typography: {
 			h1: {
-				color: '#f0c000',
 				fontSize: '3rem',
 				fontWeight: 500,
 				margin: '1rem 0',
@@ -43,12 +38,12 @@ export default function Layout({ title, description, children }) {
 			},
 		},
 		palette: {
-			mode: 'dark',
+			mode: darkMode ? 'dark' : 'light',
 			primary: {
-				main: '#f0c000',
+				main: '#027955',
 			},
 			secondary: {
-				main: '#208080',
+				main: '#7684ff',
 			},
 		},
 	})

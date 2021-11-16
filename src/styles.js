@@ -1,3 +1,4 @@
+import { Translate } from "@mui/icons-material"
 
 
 
@@ -6,6 +7,7 @@ const classes = {
         minHeight: `calc(100vh - 135px)`,
 
     }
+
 }
 
 export default classes

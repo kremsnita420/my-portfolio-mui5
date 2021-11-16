@@ -7,17 +7,15 @@ import Layout from '../components/Layout'
 export default function SkillsPage() {
 	return (
 		<Layout>
-			<Container maxWidth='sm'>
-				<Box sx={{ marginTop: '2rem' }}>
-					<Typography
-						sx={{ textAlign: 'center' }}
-						variant='h1'
-						component='h1'
-						gutterBottom>
-						Skills Page
-					</Typography>
-				</Box>
-			</Container>
+			<Box sx={{ marginTop: '2rem' }}>
+				<Typography
+					sx={{ textAlign: 'center' }}
+					variant='h1'
+					component='h1'
+					gutterBottom>
+					Skills Page
+				</Typography>
+			</Box>
 		</Layout>
 	)
 }
