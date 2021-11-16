@@ -1,4 +1,5 @@
 import { useContext, useEffect, useState } from 'react'
+import dynamic from 'next/dynamic'
 import NextLink from 'next/link'
 import { Box } from '@mui/system'
 import { useRouter } from 'next/router'
@@ -24,7 +25,7 @@ import MenuItems from './MenuItems'
 import { Store } from '../../src/StoreProvider'
 import Cookies from 'js-cookie'
 
-export default function Navbar() {
+function Navbar() {
 	//fetch from store provider
 	const { state, dispatch } = useContext(Store)
 	const { darkMode } = state
@@ -53,7 +54,7 @@ export default function Navbar() {
 		setSidebarVisible(false)
 	}
 	return (
-		<AppBar color='secondary' position='relative'>
+		<AppBar position='relative'>
 			<Container maxWidth='md'>
 				<Toolbar>
 					{/* logo */}
@@ -68,10 +69,6 @@ export default function Navbar() {
 					</Typography>
 
 					<Box style={{ flexGrow: '1' }} />
-					{/* darkmode */}
-					<Button size='small' onClick={darkModeChangeHandler} color='inherit'>
-						{darkModeState ? 'light' : 'dark '}
-					</Button>
 
 					{/* main navigation buttons */}
 					<Box sx={{ display: { md: 'block', xs: 'none' } }}>
@@ -85,7 +82,7 @@ export default function Navbar() {
 												letterSpacing: '2px',
 												fontSize: '1.5rem',
 											}}
-											color='primary'
+											color='secondary'
 											variant='outlined'>
 											{item.label}
 										</Button>
@@ -96,13 +93,20 @@ export default function Navbar() {
 												letterSpacing: '2px',
 												fontSize: '1rem',
 											}}
-											color='primary'>
+											color='secondary'>
 											{item.label}
 										</Button>
 									)}
 								</Link>
 							</NextLink>
 						))}
+						{/* darkmode */}
+						<Button
+							size='small'
+							onClick={darkModeChangeHandler}
+							color='inherit'>
+							{darkModeState ? 'light' : 'dark '}
+						</Button>
 					</Box>
 
 					{/* sidebar icon toggle */}
@@ -178,3 +182,6 @@ export default function Navbar() {
 		</AppBar>
 	)
 }
+
+// MAKE CART RENDER ON CLIENTSIDE
+export default dynamic(() => Promise.resolve(Navbar), { ssr: false })

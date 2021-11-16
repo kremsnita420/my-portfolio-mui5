@@ -1,4 +1,4 @@
-import * as React from 'react'
+import { useContext } from 'react'
 import Box from '@mui/material/Box'
 import Layout from '../components/Layout'
 import { Store } from '../src/StoreProvider'
@@ -7,14 +7,14 @@ import { motion } from 'framer-motion'
 
 export default function HomePage() {
 	//fetch from store provider
-	const { state } = React.useContext(Store)
+	const { state } = useContext(Store)
 	const { darkMode } = state
 
 	const mainPathVariant = {
 		transition: {
-			duration: 5,
-			ease: 'easeIn',
-			repeatType: 'reverse',
+			duration: 7,
+			ease: 'easeInOut',
+			yoyo: Infinity,
 		},
 		variants: {
 			visible: {

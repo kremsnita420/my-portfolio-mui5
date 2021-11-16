@@ -12,7 +12,8 @@
 #logo path {
     stroke-width: 3px;
   stroke-linecap: round;
-  stroke:red;
+  stroke:green;
+  fill:#e94e06;
 }
 
 

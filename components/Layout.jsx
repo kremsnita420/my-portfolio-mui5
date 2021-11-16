@@ -40,10 +40,10 @@ export default function Layout({ title, description, children }) {
 		palette: {
 			mode: darkMode ? 'dark' : 'light',
 			primary: {
-				main: '#9b3202',
+				main: '#3b7a75',
 			},
 			secondary: {
-				main: '#3b7a75',
+				main: '#9b3202',
 			},
 		},
 	})

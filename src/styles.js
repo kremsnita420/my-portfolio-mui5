@@ -5,10 +5,7 @@ const classes = {
         minHeight: `calc(100vh - 135px)`,
 
     },
-    navbar: {
-        background: '#2A2D43',
 
-    },
 
 }
 
