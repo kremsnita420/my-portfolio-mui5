@@ -1,12 +1,14 @@
-import { Translate } from "@mui/icons-material"
-
 
 
 const classes = {
     main: {
         minHeight: `calc(100vh - 135px)`,
 
-    }
+    },
+    navbar: {
+        background: '#2A2D43',
+
+    },
 
 }
 

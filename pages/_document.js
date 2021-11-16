@@ -2,7 +2,6 @@
 import * as React from 'react';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import createEmotionServer from '@emotion/server/create-instance';
-import theme from '../src/theme';
 import createEmotionCache from '../src/createEmotionCache';
 
 export default class MyDocument extends Document {
@@ -10,8 +9,7 @@ export default class MyDocument extends Document {
         return (
             <Html lang="en">
                 <Head>
-                    {/* PWA primary color */}
-                    <meta name="theme-color" content={theme.palette.primary.main} />
+
                     <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@300;500;700&family=Odibee+Sans&display=swap" rel="stylesheet"></link>
                 </Head>
                 <body>

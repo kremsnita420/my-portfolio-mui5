@@ -18,6 +18,7 @@ import {
 	WbSunnyIcon,
 	Brightness2Icon,
 } from '@mui/icons-material'
+import classes from '../../src/styles'
 
 import MenuItems from './MenuItems'
 import { Store } from '../../src/StoreProvider'
@@ -52,7 +53,7 @@ export default function Navbar() {
 		setSidebarVisible(false)
 	}
 	return (
-		<AppBar position='relative'>
+		<AppBar color='secondary' position='relative'>
 			<Container maxWidth='md'>
 				<Toolbar>
 					{/* logo */}
@@ -84,7 +85,7 @@ export default function Navbar() {
 												letterSpacing: '2px',
 												fontSize: '1.5rem',
 											}}
-											color='secondary'
+											color='primary'
 											variant='outlined'>
 											{item.label}
 										</Button>
@@ -95,7 +96,7 @@ export default function Navbar() {
 												letterSpacing: '2px',
 												fontSize: '1rem',
 											}}
-											color='secondary'>
+											color='primary'>
 											{item.label}
 										</Button>
 									)}

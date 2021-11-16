@@ -5,9 +5,9 @@ import {
 	CssBaseline,
 	createTheme,
 } from '@mui/material'
+import Navbar from './header/Appbar'
 import classes from '../src/styles'
 
-import Navbar from './header/Appbar'
 import { useContext } from 'react'
 import { Store } from '../src/StoreProvider'
 
@@ -40,10 +40,10 @@ export default function Layout({ title, description, children }) {
 		palette: {
 			mode: darkMode ? 'dark' : 'light',
 			primary: {
-				main: '#027955',
+				main: '#9b3202',
 			},
 			secondary: {
-				main: '#7684ff',
+				main: '#3b7a75',
 			},
 		},
 	})
