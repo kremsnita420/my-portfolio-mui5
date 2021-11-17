@@ -50,12 +50,29 @@ export default function Layout({ title, description, children }) {
 		},
 		palette: {
 			mode: darkMode ? 'dark' : 'light',
-			primary: {
-				main: '#3b7a75',
-			},
-			secondary: {
-				main: '#9b3202',
-			},
+			...(darkMode === 'light'
+				? {
+						//light theme
+						primary: {
+							main: '#3b7a75',
+						},
+						secondary: {
+							main: '#106da3',
+						},
+						background: {
+							paper: '#eee',
+							default: '#bdbdbd',
+						},
+				  }
+				: {
+						//dark theme
+						primary: {
+							main: '#f54906',
+						},
+						secondary: {
+							main: '#5ad309',
+						},
+				  }),
 		},
 	})
 

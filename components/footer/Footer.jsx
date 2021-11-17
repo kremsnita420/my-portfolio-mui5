@@ -3,30 +3,9 @@ import dynamic from 'next/dynamic'
 import NextLink from 'next/link'
 import { Box } from '@mui/system'
 import { useRouter } from 'next/router'
-import {
-	AppBar,
-	Button,
-	Container,
-	Drawer,
-	IconButton,
-	Link,
-	Toolbar,
-	Typography,
-} from '@mui/material'
-import {
-	ArrowForwardIosOutlined,
-	ArrowBackIosOutlined,
-	WbSunnyIcon,
-	Brightness2Icon,
-} from '@mui/icons-material'
-import classes from '../../src/styles'
+import { AppBar, Container, Link, Toolbar, Typography } from '@mui/material'
 
-import MenuItems from './MenuItems'
-import { Store } from '../../src/StoreProvider'
-import Cookies from 'js-cookie'
-import { motion } from 'framer-motion'
-
-export default function Footer() {
+function Footer() {
 	return (
 		<AppBar position='relative'>
 			<Container maxWidth='md'>
@@ -48,3 +27,6 @@ export default function Footer() {
 		</AppBar>
 	)
 }
+
+// MAKE CART RENDER ON CLIENTSIDE
+export default dynamic(() => Promise.resolve(Footer), { ssr: false })
