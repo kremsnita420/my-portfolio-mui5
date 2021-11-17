@@ -10,6 +10,7 @@ import classes from '../src/styles'
 
 import { useContext } from 'react'
 import { Store } from '../src/StoreProvider'
+import Footer from './footer/Footer'
 
 export default function Layout({ title, description, children }) {
 	//fetch from store provider
@@ -22,6 +23,16 @@ export default function Layout({ title, description, children }) {
 				defaultProps: {
 					underline: 'none',
 				},
+			},
+		},
+
+		breakpoints: {
+			values: {
+				xs: 0,
+				sm: 600,
+				md: 900,
+				lg: 1200,
+				xl: 1536,
 			},
 		},
 
@@ -61,6 +72,7 @@ export default function Layout({ title, description, children }) {
 				<Container maxWidth='xl' sx={classes.main}>
 					{children}
 				</Container>
+				<Footer />
 			</ThemeProvider>
 		</>
 	)

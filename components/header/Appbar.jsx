@@ -24,6 +24,7 @@ import classes from '../../src/styles'
 import MenuItems from './MenuItems'
 import { Store } from '../../src/StoreProvider'
 import Cookies from 'js-cookie'
+import { motion } from 'framer-motion'
 
 function Navbar() {
 	//fetch from store provider
@@ -53,6 +54,7 @@ function Navbar() {
 	const sidebarCloseHandler = () => {
 		setSidebarVisible(false)
 	}
+
 	return (
 		<AppBar position='relative'>
 			<Container maxWidth='md'>
@@ -60,7 +62,7 @@ function Navbar() {
 					{/* logo */}
 					<Typography variant='h4' component='div'>
 						<NextLink href='/' passHref>
-							<Link>
+							<Link color='secondary'>
 								{`<`}
 								<span style={{ color: '#eee' }}>{` SafetDev `}</span>
 								{`/>`}
@@ -100,14 +102,12 @@ function Navbar() {
 								</Link>
 							</NextLink>
 						))}
-						{/* darkmode */}
-						<Button
-							size='small'
-							onClick={darkModeChangeHandler}
-							color='inherit'>
-							{darkModeState ? 'light' : 'dark '}
-						</Button>
 					</Box>
+
+					{/* darkmode */}
+					<Button size='small' onClick={darkModeChangeHandler} color='inherit'>
+						{darkModeState ? 'light' : 'dark '}
+					</Button>
 
 					{/* sidebar icon toggle */}
 					<Box display='flex' alignItems='center'>

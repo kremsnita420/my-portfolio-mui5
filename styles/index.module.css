@@ -1,19 +1,52 @@
 
 #logo {
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50%;
     transform: translate(-50% ,-50%);
     padding: 2rem;
     max-height: 10rem;
 }
-
-/* select all individual letters */
-#logo path {
-    stroke-width: 3px;
-  stroke-linecap: round;
-  stroke:green;
-  fill:#e94e06;
+#logo2 {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    max-width: 20rem;
 }
+#logo3 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+    max-width: 20rem;
+}
+
+
+/*developer svg*/
+#logo path {
+    stroke-width: 10px;
+  stroke:green;
+  fill:blue;
+  
+}
+
+/*web svg*/
+#logo2 path {
+  stroke-width: 3px;
+  stroke:#9b2d1d;
+  fill:none;
+ 
+
+}
+/*fullstack svg*/
+#logo3 path {
+  stroke-width: 3px;
+  stroke: green;
+  fill:transparent;
+
+}
+
+
 
 

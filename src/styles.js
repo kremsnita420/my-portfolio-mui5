@@ -2,9 +2,10 @@
 
 const classes = {
     main: {
-        minHeight: `calc(100vh - 135px)`,
+        minHeight: `calc(100vh - 145px)`,
 
     },
+
 
 
 }
