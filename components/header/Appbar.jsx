@@ -16,15 +16,11 @@ import {
 import {
 	ArrowForwardIosOutlined,
 	ArrowBackIosOutlined,
-	WbSunnyIcon,
-	Brightness2Icon,
 } from '@mui/icons-material'
-import classes from '../../src/styles'
 
 import MenuItems from './MenuItems'
 import { Store } from '../../src/StoreProvider'
 import Cookies from 'js-cookie'
-import { motion } from 'framer-motion'
 
 function Navbar() {
 	//fetch from store provider

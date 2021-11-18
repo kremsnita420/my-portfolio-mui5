@@ -11,6 +11,7 @@ import classes from '../src/styles'
 import { useContext } from 'react'
 import { Store } from '../src/StoreProvider'
 import Footer from './footer/Footer'
+import { amber, deepOrange, green, grey, red } from '@mui/material/colors'
 
 export default function Layout({ title, description, children }) {
 	//fetch from store provider
@@ -22,6 +23,11 @@ export default function Layout({ title, description, children }) {
 			MuiLink: {
 				defaultProps: {
 					underline: 'none',
+				},
+			},
+			MuiSvgIcon: {
+				defaultProps: {
+					stroke: '#f45',
 				},
 			},
 		},
@@ -50,27 +56,41 @@ export default function Layout({ title, description, children }) {
 		},
 		palette: {
 			mode: darkMode ? 'dark' : 'light',
-			...(darkMode === 'light'
+			...(darkMode === false
 				? {
-						//light theme
+						// palette values for light mode
 						primary: {
-							main: '#3b7a75',
+							main: grey[800],
 						},
 						secondary: {
-							main: '#106da3',
+							main: grey[400],
 						},
+						divider: grey[400],
 						background: {
-							paper: '#eee',
-							default: '#bdbdbd',
+							default: grey[100],
+							paper: grey[200],
+						},
+						text: {
+							primary: grey[800],
+							secondary: grey[700],
 						},
 				  }
 				: {
-						//dark theme
+						// palette values for dark mode
 						primary: {
-							main: '#f54906',
+							main: amber[100],
 						},
 						secondary: {
-							main: '#5ad309',
+							main: amber[400],
+						},
+						divider: deepOrange[700],
+						background: {
+							default: deepOrange[600],
+							paper: deepOrange[600],
+						},
+						text: {
+							primary: '#fff',
+							secondary: grey[500],
 						},
 				  }),
 		},
