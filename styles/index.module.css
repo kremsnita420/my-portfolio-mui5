@@ -1,7 +1,7 @@
 
 #logo {
     position: absolute;
-    top: 30%;
+    top: 35%;
     left: 50%;
     transform: translate(-50% ,-50%);
     padding: 2rem;
@@ -16,7 +16,7 @@
 }
 #logo3 {
     position: absolute;
-    top: 40%;
+    top: 45%;
     left: 50%;
     transform: translate(-50% ,-50%);
     max-width: 20rem;
@@ -27,21 +27,21 @@
 #logo path {
     stroke-width: 10px;
   stroke:green;
-  fill:blue;
+  fill:green;
   
 }
 
 /*web svg*/
 #logo2 path {
   stroke-width: 3px;
-  stroke:#9b2d1d;
+  stroke:yellowgreen;
   fill:none;
  
 
 }
 /*fullstack svg*/
 #logo3 path {
-  stroke-width: 3px;
+  stroke-width: 5px;
   stroke: green;
   fill:transparent;
 

@@ -2,7 +2,7 @@
 
 const classes = {
     main: {
-        minHeight: `calc(100vh - 145px)`,
+        minHeight: `calc(100vh - 128px)`,
 
     },
 

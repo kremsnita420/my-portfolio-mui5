@@ -25,11 +25,6 @@ export default function Layout({ title, description, children }) {
 					underline: 'none',
 				},
 			},
-			MuiSvgIcon: {
-				defaultProps: {
-					stroke: '#f45',
-				},
-			},
 		},
 
 		breakpoints: {
@@ -60,12 +55,12 @@ export default function Layout({ title, description, children }) {
 				? {
 						// palette values for light mode
 						primary: {
-							main: grey[800],
+							main: amber[400],
 						},
 						secondary: {
 							main: grey[400],
 						},
-						divider: grey[400],
+						divider: grey[200],
 						background: {
 							default: grey[100],
 							paper: grey[200],
@@ -81,7 +76,7 @@ export default function Layout({ title, description, children }) {
 							main: amber[100],
 						},
 						secondary: {
-							main: amber[400],
+							main: green[700],
 						},
 						divider: deepOrange[700],
 						background: {
@@ -89,8 +84,8 @@ export default function Layout({ title, description, children }) {
 							paper: deepOrange[600],
 						},
 						text: {
-							primary: '#fff',
-							secondary: grey[500],
+							primary: grey[300],
+							secondary: grey[400],
 						},
 				  }),
 		},

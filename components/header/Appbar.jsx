@@ -52,13 +52,13 @@ function Navbar() {
 	}
 
 	return (
-		<AppBar position='relative'>
+		<AppBar sx={{ zIndex: 100 }} position='relative' color='secondary'>
 			<Container maxWidth='md'>
 				<Toolbar>
 					{/* logo */}
 					<Typography variant='h4' component='div'>
 						<NextLink href='/' passHref>
-							<Link color='secondary'>
+							<Link color='primary'>
 								{`<`}
 								<span style={{ color: '#eee' }}>{` SafetDev `}</span>
 								{`/>`}
@@ -80,7 +80,7 @@ function Navbar() {
 												letterSpacing: '2px',
 												fontSize: '1.5rem',
 											}}
-											color='secondary'
+											color='primary'
 											variant='outlined'>
 											{item.label}
 										</Button>
@@ -91,7 +91,7 @@ function Navbar() {
 												letterSpacing: '2px',
 												fontSize: '1rem',
 											}}
-											color='secondary'>
+											color='primary'>
 											{item.label}
 										</Button>
 									)}
@@ -110,7 +110,7 @@ function Navbar() {
 						<Button
 							sx={{ display: { md: 'none', xs: 'block' } }}
 							edge='end'
-							color='secondary'
+							color='primary'
 							aria-label='open drawer'
 							onClick={sidebarOpenHandler}>
 							<ArrowBackIosOutlined />
@@ -140,6 +140,7 @@ function Navbar() {
 										<Link>
 											{router.asPath === item.url ? (
 												<Button
+													color='primary'
 													variant='outlined'
 													size='large'
 													sx={{
@@ -154,7 +155,7 @@ function Navbar() {
 												</Button>
 											) : (
 												<Button
-													color='secondary'
+													color='primary'
 													size='large'
 													sx={{
 														margin: '10px 50px',
