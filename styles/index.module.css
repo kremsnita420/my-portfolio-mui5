@@ -1,51 +1,14 @@
 
 #logo {
     position: absolute;
-    top: 35%;
+    top: 30%;
     left: 50%;
     transform: translate(-50% ,-50%);
-    padding: 2rem;
-    max-height: 10rem;
-}
-#logo2 {
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translate(-50% ,-50%);
-    max-width: 20rem;
-}
-#logo3 {
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50% ,-50%);
-    max-width: 20rem;
+    padding: 1rem;
+    max-width: 40rem;
 }
 
 
-/*developer svg*/
-#logo path {
-    stroke-width: 10px;
-  stroke:green;
-  fill:green;
-  
-}
-
-/*web svg*/
-#logo2 path {
-  stroke-width: 3px;
-  stroke:yellowgreen;
-  fill:none;
- 
-
-}
-/*fullstack svg*/
-#logo3 path {
-  stroke-width: 5px;
-  stroke: green;
-  fill:transparent;
-
-}
 
 
 

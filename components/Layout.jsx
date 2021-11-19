@@ -58,7 +58,7 @@ export default function Layout({ title, description, children }) {
 							main: amber[400],
 						},
 						secondary: {
-							main: grey[400],
+							main: grey[800],
 						},
 						divider: grey[200],
 						background: {
@@ -73,7 +73,7 @@ export default function Layout({ title, description, children }) {
 				: {
 						// palette values for dark mode
 						primary: {
-							main: amber[100],
+							main: grey[800],
 						},
 						secondary: {
 							main: green[700],

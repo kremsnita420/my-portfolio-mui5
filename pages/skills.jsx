@@ -11,7 +11,7 @@ import { Paper, Typography } from '@mui/material'
 import { Box } from '@mui/system'
 
 import Layout from '../components/Layout'
-import { education } from '../data'
+import { education } from '../data/data'
 import classes from '../styles/skills.module.css'
 
 export default function OppositeContentTimeline() {

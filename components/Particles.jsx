@@ -26,7 +26,7 @@ export default function ParticlesContainer({ particlesInit, particlesLoaded }) {
 					enable: true,
 					value_area: 600,
 				},
-				value: 40,
+				value: 25,
 			},
 			opacity: {
 				value: 0.5,

@@ -1,0 +1,52 @@
+{
+	"projectsData": [
+		{
+			"id": "pp1",
+			"date": "May 2021 - Sep 2021",
+			"title": "Project 1",
+			"category": "Html",
+			"image": "/images/events-next.jpg",
+			"stack": "React, Next.js, MongoDb",
+			"languages": "Html, CSS, Javascript",
+			"gitLink": "https://github.com/kremsnita420/events-next-frontend",
+			"webLink": "https://eventsnextfrontend.vercel.app/",
+			"description": "The program contains 14 modules, 75+ hours, that are completed in 3-4 month. All modules are filled with interactive coding challenges to ensure that you don't fall off the wagon. I learned about HTML, CSS, JavaScript, React, UI design, career strategy, and more."
+		},
+		{
+			"id": "pp2",
+			"date": "May 2021 - Sep 2021",
+			"title": "Project 2",
+			"category": "Html",
+			"image": "/images/events-next.jpg",
+			"stack": "React, Next.js, MongoDb",
+			"languages": "Html, CSS, Javascript",
+			"gitLink": "https://github.com/kremsnita420/events-next-frontend",
+			"webLink": "https://eventsnextfrontend.vercel.app/",
+			"description": "The program contains 14 modules, 75+ hours, that are completed in 3-4 month. All modules are filled with interactive coding challenges to ensure that you don't fall off the wagon. I learned about HTML, CSS, JavaScript, React, UI design, career strategy, and more."
+		},
+		{
+			"id": "pp3",
+			"date": "May 2021 - Sep 2021",
+			"title": "Project 3",
+			"category": "Html",
+			"image": "/images/events-next.jpg",
+			"stack": "React, Next.js, MongoDb",
+			"languages": "Html, CSS, Javascript",
+			"gitLink": "https://github.com/kremsnita420/events-next-frontend",
+			"webLink": "https://eventsnextfrontend.vercel.app/",
+			"description": "The program contains 14 modules, 75+ hours, that are completed in 3-4 month. All modules are filled with interactive coding challenges to ensure that you don't fall off the wagon. I learned about HTML, CSS, JavaScript, React, UI design, career strategy, and more."
+		},
+		{
+			"id": "pp4",
+			"date": "May 2021 - Sep 2021",
+			"title": "Project 4",
+			"category": "Html",
+			"image": "/images/events-next.jpg",
+			"stack": "React, Next.js, MongoDb",
+			"languages": "Html, CSS, Javascript",
+			"gitLink": "https://github.com/kremsnita420/events-next-frontend",
+			"webLink": "https://eventsnextfrontend.vercel.app/",
+			"description": "The program contains 14 modules, 75+ hours, that are completed in 3-4 month. All modules are filled with interactive coding challenges to ensure that you don't fall off the wagon. I learned about HTML, CSS, JavaScript, React, UI design, career strategy, and more."
+		}
+	]
+}

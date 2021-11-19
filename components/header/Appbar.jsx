@@ -119,6 +119,7 @@ function Navbar() {
 
 					{/* sidebar drawer */}
 					<Drawer
+						sx={{ width: '100%' }}
 						anchor='right'
 						open={sidebarVisible}
 						onClose={sidebarCloseHandler}>
