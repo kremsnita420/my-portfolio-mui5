@@ -17,7 +17,7 @@ import classes from '../styles/skills.module.css'
 
 export default function SkillsPage() {
 	return (
-		<Layout title='Skills'>
+		<Layout title='Skills' description='Check out my skills and cetifications'>
 			<HeadTitle title='Skills' />
 			<Timeline position='alternate'>
 				{education.map((single) => (

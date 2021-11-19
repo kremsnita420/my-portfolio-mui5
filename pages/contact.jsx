@@ -5,10 +5,10 @@ import HeadTitle from '../components/layout/HeadTitle'
 
 export default function ContactPage() {
 	return (
-		<Layout title='Contact'>
+		<Layout title='Contact' description='Get in Touch'>
 			<Container maxWidth='sm'>
 				<Box sx={{ marginTop: '2rem' }}>
-					<HeadTitle title='Contact' />
+					<HeadTitle title='Get in Touch' />
 				</Box>
 			</Container>
 		</Layout>

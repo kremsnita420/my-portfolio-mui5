@@ -30,7 +30,7 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 
 export default function ProjectsPage({ projects }) {
 	return (
-		<Layout title='Projects'>
+		<Layout title='Projects' description='List of my best projects'>
 			<Box sx={{ marginTop: '2rem' }}>
 				<HeadTitle title='Projects' />
 
