@@ -12,7 +12,9 @@ export default function SingleProjectPage(props) {
 	console.log(filteredProject)
 
 	return (
-		<Layout title='Project' description={filteredProject.description}>
+		<Layout
+			title={`Project -  ${filteredProject.title}`}
+			description={filteredProject.description}>
 			<Container maxWidth='sm'>
 				<Box sx={{ marginTop: '2rem' }}>
 					<HeadTitle title={filteredProject.title} />
