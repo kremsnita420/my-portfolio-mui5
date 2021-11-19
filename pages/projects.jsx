@@ -1,6 +1,5 @@
 import {
 	Button,
-	CardMedia,
 	Card,
 	Typography,
 	CardContent,
@@ -12,9 +11,6 @@ import {
 import { Box } from '@mui/system'
 import NextLink from 'next/link'
 import NextImage from 'next/image'
-import { useRouter } from 'next/router'
-
-import { projectsData } from '../data/data'
 
 import Layout from '../components/Layout'
 import { styled } from '@mui/styles'
@@ -32,9 +28,6 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 }))
 
 export default function ProjectsPage({ projects }) {
-	const router = useRouter()
-	const { projectId } = router.query
-	console.log(projects)
 	return (
 		<Layout title='Projects'>
 			<Box sx={{ marginTop: '2rem' }}>
@@ -48,47 +41,47 @@ export default function ProjectsPage({ projects }) {
 
 				<Grid container spacing={2}>
 					{projects.map((project) => (
-						<Grid sx={12} md={6} lg={4} item key={project.id}>
-							<NextLink href={`/project/${project.id}`} passHref>
-								<Link>
-									<Card>
+						<Grid xs={12} md={6} lg={4} item key={project.id}>
+							<Card>
+								<NextLink href={`/project/${project.id}`} passHref>
+									<Link>
 										<NextImage
 											src={project.image}
 											width={800}
 											height={400}
 											layout='responsive'
 										/>
+									</Link>
+								</NextLink>
 
-										<CardContent>
-											<StyledBadge
-												badgeContent={project.category}
-												color='secondary'
-												horizontal='left'>
-												<Typography gutterBottom variant='h5' component='div'>
-													{project.title}
-												</Typography>
-											</StyledBadge>
-											<Typography variant='body2' color='text.secondary'>
-												{project.description}
-											</Typography>
-										</CardContent>
-										<CardActions>
-											<Button
-												target='_blank'
-												href={project.gitLink}
-												size='small'>
-												Github
-											</Button>
-											<Button
-												target='_blank'
-												href={project.webLink}
-												size='small'>
-												Live Site
-											</Button>
-										</CardActions>
-									</Card>
-								</Link>
-							</NextLink>
+								<CardContent>
+									<StyledBadge
+										badgeContent={project.category}
+										color='secondary'
+										horizontal='left'>
+										<Typography gutterBottom variant='h5' component='div'>
+											{project.title}
+										</Typography>
+									</StyledBadge>
+									<Typography variant='body2' color='text.secondary'>
+										{project.description}
+									</Typography>
+								</CardContent>
+
+								<CardActions>
+									<NextLink href={project.gitLink} target='_blank' passHref>
+										<Link>
+											<Button size='small'>Github</Button>
+										</Link>
+									</NextLink>
+
+									<NextLink href={project.gitLink} target='_blank' passHref>
+										<Link>
+											<Button size='small'>Live Site</Button>
+										</Link>
+									</NextLink>
+								</CardActions>
+							</Card>
 						</Grid>
 					))}
 				</Grid>
