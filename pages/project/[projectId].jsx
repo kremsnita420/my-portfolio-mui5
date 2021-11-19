@@ -4,26 +4,18 @@ import Layout from '../../components/Layout'
 
 import path from 'path'
 import fs from 'fs/promises'
+import HeadTitle from '../../components/layout/HeadTitle'
 
 export default function SingleProjectPage(props) {
 	const { filteredProject } = props
 
+	console.log(filteredProject)
+
 	return (
-		<Layout
-			title={filteredProject.title}
-			description={filteredProject.description}>
+		<Layout title='Project' description={filteredProject.description}>
 			<Container maxWidth='sm'>
 				<Box sx={{ marginTop: '2rem' }}>
-					<Typography
-						sx={{ textAlign: 'center' }}
-						variant='h3'
-						component='h1'
-						gutterBottom>
-						Single Project Page
-					</Typography>
-					<h2>
-						{filteredProject.title} - {filteredProject.stack}
-					</h2>
+					<HeadTitle title={filteredProject.title} />
 				</Box>
 			</Container>
 		</Layout>

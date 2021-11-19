@@ -62,7 +62,7 @@ export default function HomePage() {
 	}
 
 	return (
-		<Layout>
+		<Layout title='Home Page'>
 			<ParticlesContainer />
 			<Box
 				sx={{

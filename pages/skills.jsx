@@ -11,19 +11,14 @@ import { Paper, Typography } from '@mui/material'
 import { Box } from '@mui/system'
 
 import Layout from '../components/Layout'
+import HeadTitle from '../components/layout/HeadTitle'
 import { education } from '../data/data'
 import classes from '../styles/skills.module.css'
 
-export default function OppositeContentTimeline() {
+export default function SkillsPage() {
 	return (
 		<Layout title='Skills'>
-			<Typography
-				sx={{ textAlign: 'center' }}
-				variant='h1'
-				component='h1'
-				gutterBottom>
-				Skills and Education
-			</Typography>
+			<HeadTitle title='Skills' />
 			<Timeline position='alternate'>
 				{education.map((single) => (
 					<TimelineItem key={single.id}>

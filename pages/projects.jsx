@@ -17,6 +17,7 @@ import { styled } from '@mui/styles'
 
 import path from 'path'
 import fs from 'fs/promises'
+import HeadTitle from '../components/layout/HeadTitle'
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
 	'& .MuiBadge-badge': {
@@ -31,13 +32,7 @@ export default function ProjectsPage({ projects }) {
 	return (
 		<Layout title='Projects'>
 			<Box sx={{ marginTop: '2rem' }}>
-				<Typography
-					sx={{ textAlign: 'center' }}
-					variant='h1'
-					component='h1'
-					gutterBottom>
-					All Projects Page
-				</Typography>
+				<HeadTitle title='Projects' />
 
 				<Grid container spacing={2}>
 					{projects.map((project) => (
@@ -69,14 +64,14 @@ export default function ProjectsPage({ projects }) {
 								</CardContent>
 
 								<CardActions>
-									<NextLink href={project.gitLink} target='_blank' passHref>
-										<Link>
+									<NextLink href={project.gitLink} passHref>
+										<Link target='_blank'>
 											<Button size='small'>Github</Button>
 										</Link>
 									</NextLink>
 
-									<NextLink href={project.gitLink} target='_blank' passHref>
-										<Link>
+									<NextLink href={project.gitLink} passHref>
+										<Link target='_blank'>
 											<Button size='small'>Live Site</Button>
 										</Link>
 									</NextLink>
