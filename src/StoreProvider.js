@@ -6,6 +6,7 @@ export const Store = createContext()
 //initial states
 const initialState = {
     darkMode: Cookies.get('darkMode') === 'ON' ? true : false,
+    activeLink: Cookies.get('activeLink') === 'ON' ? true : false,
 }
 
 //define reducer
@@ -15,6 +16,10 @@ function reducer(state, action) {
             return { ...state, darkMode: true }
         case 'DARK_MODE_OFF':
             return { ...state, darkMode: false }
+        case 'ACTIVE_LINK_ON':
+            return { ...state, activeLink: true }
+        case 'ACTIVE_LINK_OFF':
+            return { ...state, activeLink: false }
         default:
             return state
     }

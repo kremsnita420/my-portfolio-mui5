@@ -1,6 +1,6 @@
 import { Typography, Container } from '@mui/material'
 import { Box } from '@mui/system'
-import Layout from '../components/Layout'
+import Layout from '../components/layout/Layout'
 import HeadTitle from '../components/layout/HeadTitle'
 
 export default function ContactPage() {

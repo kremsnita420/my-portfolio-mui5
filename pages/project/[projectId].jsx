@@ -1,6 +1,6 @@
 import { Typography, Container } from '@mui/material'
 import { Box } from '@mui/system'
-import Layout from '../../components/Layout'
+import Layout from '../../components/layout/Layout'
 
 import path from 'path'
 import fs from 'fs/promises'

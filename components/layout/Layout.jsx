@@ -5,12 +5,12 @@ import {
 	CssBaseline,
 	createTheme,
 } from '@mui/material'
-import Navbar from './header/Appbar'
-import classes from '../src/styles'
+import Appbar from '../header/Appbar'
+import classes from '../../src/styles'
 
 import { useContext } from 'react'
-import { Store } from '../src/StoreProvider'
-import Footer from './footer/Footer'
+import { Store } from '../../src/StoreProvider'
+import Footer from '../footer/Footer'
 import { amber, deepOrange, green, grey, red } from '@mui/material/colors'
 
 export default function Layout({ title, description, children }) {
@@ -38,15 +38,23 @@ export default function Layout({ title, description, children }) {
 		},
 
 		typography: {
+			fontFamily: 'Big Shoulders Display',
+
 			h1: {
+				fontFamily: 'Odibee Sans',
 				fontSize: '3rem',
 				fontWeight: 500,
 				margin: '1rem 0',
+				letterSpacing: '3px',
 			},
 			h2: {
+				fontFamily: 'Odibee Sans',
 				fontSize: '2rem',
 				fontWeight: 500,
 				margin: '1rem 0',
+			},
+			p: {
+				fontWeight: 300,
 			},
 		},
 		palette: {
@@ -99,7 +107,7 @@ export default function Layout({ title, description, children }) {
 			</Head>
 
 			<ThemeProvider theme={theme}>
-				<Navbar />
+				<Appbar />
 				<CssBaseline />
 				<Container maxWidth='xl' sx={classes.main}>
 					{children}

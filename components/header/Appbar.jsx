@@ -75,22 +75,19 @@ function Navbar() {
 								<Link style={{ textDecoration: 'none' }}>
 									{router.asPath === item.url ? (
 										<Button
+											size='large'
 											sx={{
-												fontFamily: 'Odibee Sans',
-												letterSpacing: '2px',
-												fontSize: '1.5rem',
+												borderBottom: '5px solid',
 											}}
-											color='primary'
-											variant='outlined'>
+											color='primary'>
 											{item.label}
 										</Button>
 									) : (
 										<Button
 											sx={{
-												fontFamily: 'Odibee Sans',
-												letterSpacing: '2px',
-												fontSize: '1rem',
+												borderBottom: '5px solid transparent',
 											}}
+											size='large'
 											color='primary'>
 											{item.label}
 										</Button>
@@ -127,7 +124,7 @@ function Navbar() {
 						<Box>
 							<Button
 								edge='end'
-								color='secondary'
+								color='primary'
 								aria-label='close drawer'
 								onClick={sidebarCloseHandler}>
 								<ArrowForwardIosOutlined />
@@ -142,15 +139,14 @@ function Navbar() {
 											{router.asPath === item.url ? (
 												<Button
 													color='primary'
-													variant='outlined'
 													size='large'
 													sx={{
 														margin: ' 10px 50px',
 														textAlign: 'center',
 														minWidth: '160px',
-														fontFamily: 'Odibee Sans',
 														letterSpacing: '2px',
 														fontSize: '1.5rem',
+														borderBottom: '5px solid',
 													}}>
 													{item.label}
 												</Button>
@@ -162,9 +158,9 @@ function Navbar() {
 														margin: '10px 50px',
 														border: '1px solid transparent',
 														minWidth: '160px',
-														fontFamily: 'Odibee Sans',
 														letterSpacing: '2px',
 														fontSize: '1rem',
+														borderBottom: '5px solid transparent',
 													}}>
 													{item.label}
 												</Button>

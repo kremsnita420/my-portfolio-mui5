@@ -10,10 +10,9 @@ import {
 import { Paper, Typography } from '@mui/material'
 import { Box } from '@mui/system'
 
-import Layout from '../components/Layout'
+import Layout from '../components/layout/Layout'
 import HeadTitle from '../components/layout/HeadTitle'
 import { education } from '../data/data'
-import classes from '../styles/skills.module.css'
 
 export default function SkillsPage() {
 	return (
