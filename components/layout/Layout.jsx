@@ -115,6 +115,7 @@ export default function Layout({ title, description, children }) {
 						flexDirection: 'column',
 						alignItems: 'center',
 						justifyContent: 'flex-start',
+						minHeight: '87.5vh',
 
 						'& > *': {
 							m: 2,

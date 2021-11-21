@@ -27,7 +27,6 @@ export default function SingleProjectPage(props) {
 							<Box
 								sx={{
 									mt: 2,
-
 									display: 'flex',
 									alignItems: 'center',
 									justifyContent: 'center',
@@ -54,6 +53,7 @@ export default function SingleProjectPage(props) {
 									<Box
 										key={i}
 										sx={{
+											cursor: 'pointer',
 											borderRadius: '5px',
 											border:
 												selectedImage === img
