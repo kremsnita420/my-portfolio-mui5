@@ -113,6 +113,7 @@ export default function ProjectsPage({ projects }) {
 													placeholder='blur'
 													blurDataURL='https://images.unsplash.com/photo-1613387275674-cb92af1c29d1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80'
 													src={project.image[0]}
+													alt={project.image[0].title}
 													width={800}
 													height={400}
 													layout='responsive'
@@ -141,7 +142,11 @@ export default function ProjectsPage({ projects }) {
 									<CardActions>
 										<NextLink href={project.gitLink} passHref>
 											<Link target='_blank'>
-												<Button variant='outlined' size='large'>
+												<Button
+													aria-label='external link'
+													rel='noopener'
+													variant='outlined'
+													size='large'>
 													Github
 												</Button>
 											</Link>
@@ -149,7 +154,11 @@ export default function ProjectsPage({ projects }) {
 
 										<NextLink href={project.webLink} passHref>
 											<Link target='_blank'>
-												<Button variant='contained' size='medium'>
+												<Button
+													aria-label='external link'
+													rel='noopener'
+													variant='contained'
+													size='medium'>
 													Live Site
 												</Button>
 											</Link>
