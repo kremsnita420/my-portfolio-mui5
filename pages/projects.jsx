@@ -110,6 +110,8 @@ export default function ProjectsPage({ projects }) {
 										<NextLink href={`/project/${project.id}`} passHref>
 											<Link>
 												<NextImage
+													placeholder='blur'
+													blurDataURL='https://images.unsplash.com/photo-1571330735066-03aaa9429d89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'
 													src={project.image[0]}
 													width={800}
 													height={400}
