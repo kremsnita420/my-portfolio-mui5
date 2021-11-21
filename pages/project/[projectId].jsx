@@ -12,7 +12,7 @@ export default function SingleProjectPage(props) {
 	const { filteredProject } = props
 	const [selectedImage, setSelectedImage] = useState(filteredProject.image[2])
 
-	console.log(filteredProject)
+	console.log(selectedImage)
 
 	return (
 		<Layout
@@ -33,6 +33,8 @@ export default function SingleProjectPage(props) {
 									justifyContent: 'center',
 								}}>
 								<Image
+									placeholder='blur'
+									blurDataURL='https://images.unsplash.com/photo-1571330735066-03aaa9429d89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'
 									src={selectedImage}
 									alt='thumbnail'
 									width={1600}
@@ -52,12 +54,15 @@ export default function SingleProjectPage(props) {
 									<Box
 										key={i}
 										sx={{
+											borderRadius: '5px',
 											border:
 												selectedImage === img
 													? '5px solid'
 													: '5px solid transparent',
 										}}>
 										<Image
+											placeholder='blur'
+											blurDataURL='https://images.unsplash.com/photo-1571330735066-03aaa9429d89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'
 											onClick={() => setSelectedImage(img)}
 											src={img}
 											alt='thumbnail'
