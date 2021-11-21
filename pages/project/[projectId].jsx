@@ -34,7 +34,7 @@ export default function SingleProjectPage(props) {
 								}}>
 								<Image
 									placeholder='blur'
-									blurDataURL='https://images.unsplash.com/photo-1571330735066-03aaa9429d89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'
+									blurDataURL='https://images.unsplash.com/photo-1613387275674-cb92af1c29d1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80'
 									src={selectedImage}
 									alt='thumbnail'
 									width={1600}
@@ -62,7 +62,7 @@ export default function SingleProjectPage(props) {
 										}}>
 										<Image
 											placeholder='blur'
-											blurDataURL='https://images.unsplash.com/photo-1571330735066-03aaa9429d89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'
+											blurDataURL='https://images.unsplash.com/photo-1613387275674-cb92af1c29d1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80'
 											onClick={() => setSelectedImage(img)}
 											src={img}
 											alt='thumbnail'
