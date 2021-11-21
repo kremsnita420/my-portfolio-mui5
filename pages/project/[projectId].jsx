@@ -2,14 +2,15 @@ import { Paper, Grid } from '@mui/material'
 import Image from 'next/image'
 import { Box } from '@mui/system'
 import Layout from '../../components/layout/Layout'
-import Carousel from 'react-material-ui-carousel'
 
 import path from 'path'
 import fs from 'fs/promises'
 import HeadTitle from '../../components/layout/HeadTitle'
+import { useState } from 'react'
 
 export default function SingleProjectPage(props) {
 	const { filteredProject } = props
+	const [selectedImage, setSelectedImage] = useState(filteredProject.image[2])
 
 	console.log(filteredProject)
 
@@ -23,25 +24,49 @@ export default function SingleProjectPage(props) {
 				<Grid item xs={12}>
 					<Box>
 						<Paper elevation={3}>
-							<Carousel>
-								{filteredProject.image.map((img, i) => (
-									<Image
-										key={i}
-										src={img}
-										alt='alt'
-										width={1400}
-										height={700}
-										layout='responsive'
-									/>
-								))}
-							</Carousel>
 							<Box
 								sx={{
 									mt: 2,
+
 									display: 'flex',
 									alignItems: 'center',
 									justifyContent: 'center',
-								}}></Box>
+								}}>
+								<Image
+									src={selectedImage}
+									alt='thumbnail'
+									width={1600}
+									height={600}
+								/>
+							</Box>
+						</Paper>
+						<Paper elevation={3}>
+							<Box
+								sx={{
+									m: 2,
+									display: 'flex',
+									alignItems: 'center',
+									justifyContent: 'center',
+								}}>
+								{filteredProject.image.map((img, i) => (
+									<Box
+										key={i}
+										sx={{
+											border:
+												selectedImage === img
+													? '5px solid'
+													: '5px solid transparent',
+										}}>
+										<Image
+											onClick={() => setSelectedImage(img)}
+											src={img}
+											alt='thumbnail'
+											width={100}
+											height={100}
+										/>
+									</Box>
+								))}
+							</Box>
 						</Paper>
 					</Box>
 				</Grid>
