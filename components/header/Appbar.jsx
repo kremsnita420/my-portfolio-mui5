@@ -105,8 +105,8 @@ function Navbar() {
 						color='inherit'>
 						{darkModeState ? (
 							<svg
-								width='69'
-								height='51'
+								width='72'
+								height='48'
 								viewBox='0 0 69 51'
 								fill='none'
 								xmlns='http://www.w3.org/2000/svg'>

@@ -50,8 +50,11 @@ export default function ProjectsPage({ projects }) {
 	const [alignment, setAlignment] = useState('left')
 
 	const handleAlignment = (event, newAlignment) => {
+		event.preventDefault()
 		setAlignment(newAlignment)
 	}
+
+	console.log(alignment)
 
 	return (
 		<Layout title='Projects' description='List of my best projects'>
@@ -73,6 +76,7 @@ export default function ProjectsPage({ projects }) {
 						onChange={handleAlignment}
 						aria-label='text alignment'>
 						<ToggleButton
+							variant='outlined'
 							value='center'
 							aria-label='centered'
 							color='primary'
