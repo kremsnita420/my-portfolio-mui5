@@ -1,6 +1,8 @@
-import { Typography, Container } from '@mui/material'
+import { Paper, Grid } from '@mui/material'
+import Image from 'next/image'
 import { Box } from '@mui/system'
 import Layout from '../../components/layout/Layout'
+import Carousel from 'react-material-ui-carousel'
 
 import path from 'path'
 import fs from 'fs/promises'
@@ -15,11 +17,41 @@ export default function SingleProjectPage(props) {
 		<Layout
 			title={filteredProject.title}
 			description={filteredProject.description}>
-			<Container maxWidth='sm'>
-				<Box sx={{ marginTop: '2rem' }}>
-					<HeadTitle title={filteredProject.title} />
-				</Box>
-			</Container>
+			<HeadTitle title={filteredProject.title} />
+
+			<Grid container spacing={2}>
+				<Grid item xs={12}>
+					<Box>
+						<Paper elevation={3}>
+							<Carousel>
+								{filteredProject.image.map((img, i) => (
+									<Image
+										key={i}
+										src={img}
+										alt='alt'
+										width={1400}
+										height={700}
+										layout='responsive'
+									/>
+								))}
+							</Carousel>
+							<Box
+								sx={{
+									mt: 2,
+									display: 'flex',
+									alignItems: 'center',
+									justifyContent: 'center',
+								}}></Box>
+						</Paper>
+					</Box>
+				</Grid>
+
+				<Grid item xs={12} lg={6}>
+					<Box>
+						<Paper elevation={3}></Paper>
+					</Box>
+				</Grid>
+			</Grid>
 		</Layout>
 	)
 }

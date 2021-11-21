@@ -6,7 +6,6 @@ import {
 	createTheme,
 } from '@mui/material'
 import Appbar from '../header/Appbar'
-import classes from '../../src/styles'
 
 import { useContext } from 'react'
 import { Store } from '../../src/StoreProvider'
@@ -109,7 +108,18 @@ export default function Layout({ title, description, children }) {
 			<ThemeProvider theme={theme}>
 				<Appbar />
 				<CssBaseline />
-				<Container maxWidth='xl' sx={classes.main}>
+				<Container
+					maxWidth='xl'
+					sx={{
+						display: 'flex',
+						flexDirection: 'column',
+						alignItems: 'center',
+						justifyContent: 'flex-start',
+
+						'& > *': {
+							m: 2,
+						},
+					}}>
 					{children}
 				</Container>
 				<Footer />

@@ -110,7 +110,7 @@ export default function ProjectsPage({ projects }) {
 										<NextLink href={`/project/${project.id}`} passHref>
 											<Link>
 												<NextImage
-													src={project.image}
+													src={project.image[0]}
 													width={800}
 													height={400}
 													layout='responsive'
@@ -138,7 +138,7 @@ export default function ProjectsPage({ projects }) {
 
 									<CardActions>
 										<NextLink href={project.gitLink} passHref>
-											<Link target='_blank' rel='noopener'>
+											<Link target='_blank'>
 												<Button variant='outlined' size='large'>
 													Github
 												</Button>
@@ -146,7 +146,7 @@ export default function ProjectsPage({ projects }) {
 										</NextLink>
 
 										<NextLink href={project.webLink} passHref>
-											<Link target='_blank' rel='noopener'>
+											<Link target='_blank'>
 												<Button variant='contained' size='medium'>
 													Live Site
 												</Button>

@@ -25,6 +25,7 @@
 		"prop-types": "latest",
 		"react": "^17.0.2",
 		"react-dom": "latest",
+		"react-material-ui-carousel": "^3.0.4",
 		"react-tsparticles": "^1.37.4"
 	},
 	"devDependencies": {
