@@ -23,8 +23,8 @@ export default function SelfthoughtTextSvg() {
 				width: '45%',
 				height: '45%',
 				position: 'absolute',
-				top: '0',
-				right: '20%',
+				top: '-10%',
+				right: '10%',
 			}}
 			viewBox='0 0 518 119'
 			fill='none'

@@ -22,8 +22,8 @@ export default function FullstackTextSvg() {
 				width: '45%',
 				height: '45%',
 				position: 'absolute',
-				bottom: '0',
-				right: '0',
+				bottom: '-10%',
+				right: '-5%',
 			}}
 			width='375'
 			height='70'
