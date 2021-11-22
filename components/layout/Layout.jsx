@@ -9,7 +9,7 @@ import Appbar from '../header/Appbar'
 
 import { useContext } from 'react'
 import { Store } from '../../src/StoreProvider'
-import Footer from '../footer/Footer'
+
 import { amber, deepOrange, green, grey, red } from '@mui/material/colors'
 
 export default function Layout({ title, description, children }) {
@@ -22,6 +22,15 @@ export default function Layout({ title, description, children }) {
 			MuiLink: {
 				defaultProps: {
 					underline: 'none',
+				},
+			},
+			MuiButton: {
+				root: {
+					hover: {
+						'&:hover': {
+							backgroundColor: 'rgb(7, 177, 77, 0.42)',
+						},
+					},
 				},
 			},
 		},
@@ -56,6 +65,7 @@ export default function Layout({ title, description, children }) {
 				fontWeight: 300,
 			},
 		},
+
 		palette: {
 			mode: darkMode ? 'dark' : 'light',
 			...(darkMode === false
@@ -123,7 +133,6 @@ export default function Layout({ title, description, children }) {
 					}}>
 					{children}
 				</Container>
-				<Footer />
 			</ThemeProvider>
 		</>
 	)

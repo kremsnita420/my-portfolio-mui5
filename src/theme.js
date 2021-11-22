@@ -1,18 +1,23 @@
 import { useContext } from "react"
 
-import { amber, deepOrange, green, grey, red } from '@mui/material/colors'
+import { amber, deepOrange, green, grey } from '@mui/material/colors'
 
 import { Store } from "./StoreProvider"
 
 //fetch from store provider
-const { state } = useContext(Store)
-const { darkMode } = state
 
-export const theme = createTheme({
+function ThemeCreator() {
+    const { state } = useContext(Store)
+    const { darkMode } = state
+}
+const theme = createTheme({
     components: {
         MuiLink: {
             defaultProps: {
                 underline: 'none',
+                hover: {
+                    backgroundColor: "#eee",
+                },
             },
         },
     },
@@ -80,3 +85,6 @@ export const theme = createTheme({
             }),
     },
 })
+ThemeCreator()
+
+export default theme

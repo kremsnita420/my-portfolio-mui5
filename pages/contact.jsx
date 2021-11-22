@@ -6,7 +6,7 @@ import HeadTitle from '../components/layout/HeadTitle'
 
 export default function ContactPage() {
 	return (
-		<Layout title='Contact' description='Get in Touch'>
+		<Layout title='Get in Touch' description='Get in Touch'>
 			<HeadTitle title='Get in Touch' />
 
 			<Button
