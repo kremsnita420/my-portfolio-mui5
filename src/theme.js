@@ -51,9 +51,13 @@ const theme = createTheme({
                 // palette values for light mode
                 primary: {
                     main: amber[400],
+
                 },
                 secondary: {
                     main: grey[800],
+                },
+                success: {
+                    main: green[200],
                 },
                 divider: grey[200],
                 background: {
@@ -72,6 +76,10 @@ const theme = createTheme({
                 },
                 secondary: {
                     main: green[700],
+                },
+
+                success: {
+                    main: green[200],
                 },
                 divider: deepOrange[700],
                 background: {

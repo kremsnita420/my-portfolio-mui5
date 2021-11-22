@@ -10,7 +10,15 @@ import Appbar from '../header/Appbar'
 import { useContext } from 'react'
 import { Store } from '../../src/StoreProvider'
 
-import { amber, deepOrange, green, grey, red } from '@mui/material/colors'
+import {
+	amber,
+	blue,
+	deepOrange,
+	green,
+	grey,
+	orange,
+	red,
+} from '@mui/material/colors'
 
 export default function Layout({ title, description, children }) {
 	//fetch from store provider
@@ -77,6 +85,12 @@ export default function Layout({ title, description, children }) {
 						secondary: {
 							main: grey[800],
 						},
+						warning: {
+							main: red[800],
+						},
+						info: {
+							main: deepOrange[100],
+						},
 						divider: grey[200],
 						background: {
 							default: grey[100],
@@ -94,6 +108,15 @@ export default function Layout({ title, description, children }) {
 						},
 						secondary: {
 							main: green[700],
+						},
+						warning: {
+							main: orange[600],
+						},
+						info: {
+							main: blue[400],
+						},
+						success: {
+							main: green[900],
 						},
 						divider: deepOrange[700],
 						background: {

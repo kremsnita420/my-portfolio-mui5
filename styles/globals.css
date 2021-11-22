@@ -4,10 +4,10 @@ body {
   
   font-family: 'Odibee Sans', cursive;
   font-weight: 500;
-  zoom: reset;
-  background-color: rgba(0, 0, 0, .6);
   background-size: cover;
   min-height: 100vh;
+  background-image: url('/images/space-bg.svg');
+  background-size: cover;
 
 
 }

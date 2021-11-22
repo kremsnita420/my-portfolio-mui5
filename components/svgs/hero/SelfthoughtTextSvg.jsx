@@ -7,7 +7,7 @@ export default function SelfthoughtTextSvg() {
 			opacity: 1,
 			y: 0,
 			transition: {
-				delay: 3.5,
+				delay: 4,
 				duration: 3,
 			},
 		},
