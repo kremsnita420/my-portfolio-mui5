@@ -3,17 +3,15 @@ import { motion } from 'framer-motion'
 
 export default function HeroTextSvg() {
 	const mainPathVariant = {
-		variants: {
-			visible: {
-				scale: 1,
-			},
-			hidden: {
-				scale: 0,
-			},
-			transition: {
-				duration: 5,
-				ease: 'easeInOut',
-			},
+		visible: {
+			scale: 1,
+		},
+		hidden: {
+			scale: 0,
+		},
+		transition: {
+			duration: 5,
+			ease: 'easeInOut',
 		},
 	}
 	const secPathVariant = {

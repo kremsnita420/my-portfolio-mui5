@@ -18,7 +18,7 @@ export default function SelfthoughtTextSvg() {
 	}
 	return (
 		<SvgIcon
-			color='success'
+			color='info'
 			sx={{
 				width: '45%',
 				height: '45%',

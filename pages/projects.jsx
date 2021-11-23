@@ -71,12 +71,13 @@ export default function ProjectsPage({ projects }) {
 						},
 					}}>
 					<ToggleButtonGroup
+						variant='contained'
 						value={alignment}
 						exclusive
 						onChange={handleAlignment}
 						aria-label='text alignment'>
 						<ToggleButton
-							variant='outlined'
+							variant='contained'
 							value='center'
 							aria-label='centered'
 							color='primary'

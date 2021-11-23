@@ -19,11 +19,16 @@ import {
 	ArrowBackIosOutlined,
 } from '@mui/icons-material'
 
-import MenuItems from './MenuItems'
+import MenuItems from '../../data/MenuItems'
 import { Store } from '../../src/StoreProvider'
 import Cookies from 'js-cookie'
 import YellowIntruderSvg from '../svgs/YellowIntruderSvg'
 import BlackIntruderSvg from '../svgs/BlackIntruderSvg'
+import Logo from './Logo'
+import HoverUnderline from '../../components/svgs/HoverUnderline'
+import CustomLink from './CustomLink'
+import StyledButtonCustomization from './CustomLink'
+import HoverCrossed from '../svgs/HoverCrossed'
 
 function Navbar() {
 	//fetch from store provider
@@ -59,15 +64,7 @@ function Navbar() {
 			<Container maxWidth='md'>
 				<Toolbar>
 					{/* logo */}
-					<Typography variant='h4' component='div'>
-						<NextLink href='/' passHref>
-							<Link color='primary'>
-								{`<`}
-								<span style={{ color: '#eee' }}>{` SafetDev `}</span>
-								{`/>`}
-							</Link>
-						</NextLink>
-					</Typography>
+					<Logo />
 
 					<Box style={{ flexGrow: '1' }} />
 
@@ -75,26 +72,8 @@ function Navbar() {
 					<Box sx={{ display: { md: 'block', xs: 'none' } }}>
 						{MenuItems.map((item) => (
 							<NextLink key={item.id} href={item.url} passHref>
-								<Link style={{ textDecoration: 'none' }}>
-									{router.asPath === item.url ? (
-										<Button
-											size='large'
-											sx={{
-												borderBottom: '5px solid',
-											}}
-											color='primary'>
-											{item.label}
-										</Button>
-									) : (
-										<Button
-											sx={{
-												borderBottom: '5px solid transparent',
-											}}
-											size='large'
-											color='primary'>
-											{item.label}
-										</Button>
-									)}
+								<Link>
+									<Button>{item.label}</Button>
 								</Link>
 							</NextLink>
 						))}
@@ -102,6 +81,11 @@ function Navbar() {
 
 					{/* darkmode */}
 					<IconButton
+						sx={{
+							'&:hover': {
+								background: 'transparent',
+							},
+						}}
 						size='small'
 						onClick={darkModeChangeHandler}
 						color='inherit'>
@@ -109,72 +93,75 @@ function Navbar() {
 					</IconButton>
 
 					{/* sidebar icon toggle */}
-					<Box display='flex' alignItems='center'>
-						<Button
-							sx={{ display: { md: 'none', xs: 'block' } }}
-							edge='end'
-							color='primary'
-							aria-label='open drawer'
-							onClick={sidebarOpenHandler}>
-							<ArrowBackIosOutlined />
-						</Button>
-					</Box>
+					<Button
+						sx={{
+							lineHeight: 1,
+							display: {
+								md: 'none',
+								xs: 'block',
+							},
+							'&:hover': {
+								background: 'transparent',
+							},
+						}}
+						edge='end'
+						color='primary'
+						aria-label='open drawer'
+						onClick={sidebarOpenHandler}>
+						<ArrowBackIosOutlined />
+					</Button>
 
 					{/* sidebar drawer */}
 					<Drawer
+						PaperProps={{
+							sx: { width: '100%', height: '100%' },
+						}}
 						anchor='right'
 						open={sidebarVisible}
 						onClose={sidebarCloseHandler}>
-						{/* sidebar icon toggle */}
-						<Box>
-							<Button
-								edge='end'
-								color='primary'
-								aria-label='close drawer'
-								onClick={sidebarCloseHandler}>
-								<ArrowForwardIosOutlined />
-							</Button>
-						</Box>
-						{/* side navigation buttons */}
-						<Box>
+						<Container
+							maxWidth='xs'
+							sx={{
+								height: '100%',
+								display: 'flex',
+								flexDirection: 'column',
+								alignItems: 'center',
+								justifyContent: 'center',
+							}}>
+							{/* sidebar close icon toggle */}
+							<Box>
+								<Button
+									sx={{
+										'&:hover': {
+											background: 'transparent',
+										},
+									}}
+									edge='end'
+									color='primary'
+									aria-label='close drawer'
+									onClick={sidebarCloseHandler}>
+									<ArrowForwardIosOutlined />
+								</Button>
+							</Box>
+							{/* side navigation buttons */}
 							{MenuItems.map((item) => (
-								<Box key={item.id}>
-									<NextLink href={item.url} passHref>
-										<Link>
-											{router.asPath === item.url ? (
-												<Button
-													color='primary'
-													size='large'
-													sx={{
-														margin: ' 10px 50px',
-														textAlign: 'center',
-														minWidth: '160px',
-														letterSpacing: '2px',
-														fontSize: '1.5rem',
-														borderBottom: '5px solid',
-													}}>
-													{item.label}
-												</Button>
-											) : (
-												<Button
-													color='primary'
-													size='large'
-													sx={{
-														margin: '10px 50px',
-														border: '1px solid transparent',
-														minWidth: '160px',
-														letterSpacing: '2px',
-														fontSize: '1rem',
-														borderBottom: '5px solid transparent',
-													}}>
-													{item.label}
-												</Button>
-											)}
-										</Link>
-									</NextLink>
-								</Box>
+								<NextLink key={item.id} href={item.url} passHref>
+									<Link>
+										{router.pathname === item.url ? (
+											<StyledButtonCustomization>
+												{item.label}
+												<HoverCrossed />
+											</StyledButtonCustomization>
+										) : (
+											<StyledButtonCustomization>
+												{item.label}
+												<HoverUnderline />
+											</StyledButtonCustomization>
+										)}
+									</Link>
+								</NextLink>
 							))}
-						</Box>
+						</Container>
 					</Drawer>
 				</Toolbar>
 			</Container>
