@@ -14,11 +14,8 @@ import {
 	Toolbar,
 	Typography,
 } from '@mui/material'
-import {
-	ArrowForwardIosOutlined,
-	ArrowBackIosOutlined,
-} from '@mui/icons-material'
-
+import { ArrowBackIosOutlined } from '@mui/icons-material'
+import BackArrow from '../svgs/BackArrow'
 import MenuItems from '../../data/MenuItems'
 import { Store } from '../../src/StoreProvider'
 import Cookies from 'js-cookie'
@@ -26,7 +23,7 @@ import YellowIntruderSvg from '../svgs/YellowIntruderSvg'
 import BlackIntruderSvg from '../svgs/BlackIntruderSvg'
 import Logo from './Logo'
 import HoverUnderline from '../../components/svgs/HoverUnderline'
-import CustomLink from './CustomLink'
+
 import StyledButtonCustomization from './CustomLink'
 import HoverCrossed from '../svgs/HoverCrossed'
 
@@ -140,7 +137,7 @@ function Navbar() {
 									color='primary'
 									aria-label='close drawer'
 									onClick={sidebarCloseHandler}>
-									<ArrowForwardIosOutlined />
+									<BackArrow />
 								</Button>
 							</Box>
 							{/* side navigation buttons */}
