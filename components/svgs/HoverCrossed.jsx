@@ -6,8 +6,8 @@ export default function HoverCrossed() {
 		<SvgIcon
 			color='primary'
 			sx={{
-				width: '100%',
-				height: '100%',
+				width: '160px',
+				height: '80px',
 				position: 'absolute',
 				top: '35%',
 				left: '50%',
