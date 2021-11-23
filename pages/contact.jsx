@@ -1,6 +1,5 @@
-import { Typography, Container, Button, Divider } from '@mui/material'
-import NextLink from 'next/link'
-import { Box } from '@mui/system'
+import { Button } from '@mui/material'
+
 import Layout from '../components/layout/Layout'
 import HeadTitle from '../components/layout/HeadTitle'
 import Image from 'next/image'
@@ -23,7 +22,6 @@ export default function ContactPage() {
 				height='350'
 				alt='404 image'
 			/>
-<<<<<<< HEAD
 
 			<Image
 				src='/images/my-gif.gif'
@@ -36,25 +34,6 @@ export default function ContactPage() {
 				alt='this slowpoke moves'
 				width='350'
 				height='350'
-=======
-			<Image
-				src='http://i.stack.imgur.com/SBv4T.gif'
-				alt='this slowpoke moves'
-				width='350'
-				height='350'
-			/>
-			<Image
-				src='/images/my-gif.gif'
-				alt='this slowpoke moves'
-				width='350'
-				height='350'
-			/>
-			<Image
-				src='/images/my-gif2.gif'
-				alt='this slowpoke moves'
-				width='350'
-				height='350'
->>>>>>> c87ced379a130e4385e514eac4989eb60f7648dd
 			/>
 		</Layout>
 	)
