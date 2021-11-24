@@ -2,7 +2,7 @@ import { useContext } from 'react'
 import Box from '@mui/material/Box'
 import Layout from '../components/layout/Layout'
 
-import { Container } from '@mui/material'
+import { Container, SvgIcon } from '@mui/material'
 
 import HeroTextSvg from '../components/svgs/hero/HeroTextSvg'
 import WebText from '../components/svgs/hero/WebText'
@@ -15,22 +15,19 @@ export default function HomePage() {
 			<Container
 				maxWidth='md'
 				sx={{
-					marginTop: '15rem',
 					display: 'flex',
 					flexDirection: 'column',
 					alignItems: 'center',
 					justifyContent: 'center',
 				}}>
 				<Box
-					variant='outlined'
 					sx={{
+						marginTop: '15rem',
 						width: '100%',
 						height: '100%',
 						padding: '2rem',
-						background: '#EE516E',
-						border: '2px solid',
-						borderRadius: '5px',
-						zIndex: '99',
+
+						zIndex: 99,
 						position: 'relative',
 					}}>
 					<WebText />

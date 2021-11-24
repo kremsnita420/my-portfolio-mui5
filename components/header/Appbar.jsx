@@ -70,7 +70,11 @@ function Navbar() {
 					}}>
 					{/* logo */}
 					<Box>
-						<NavbarLogoSvg />
+						<NextLink href='/' passHref>
+							<Link>
+								<NavbarLogoSvg />
+							</Link>
+						</NextLink>
 					</Box>
 					{/* main navigation buttons */}
 					<Box sx={{ display: { md: 'block', xs: 'none' } }}>
@@ -104,7 +108,7 @@ function Navbar() {
 							size='small'
 							onClick={darkModeChangeHandler}
 							color='inherit'>
-							{darkModeState ? <SunIcon /> : <MoonIcon />}
+							{darkModeState ? <MoonIcon /> : <SunIcon />}
 						</Button>
 					</Box>
 

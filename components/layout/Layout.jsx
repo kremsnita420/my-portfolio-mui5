@@ -20,6 +20,7 @@ import {
 	red,
 	purple,
 } from '@mui/material/colors'
+import StyledHeroBg from '../svgs/hero/HeroBackgroundSvg'
 
 export default function Layout({ title, description, children }) {
 	//fetch from store provider
@@ -81,7 +82,7 @@ export default function Layout({ title, description, children }) {
 							main: amber[400],
 						},
 						secondary: {
-							main: grey[200],
+							main: grey[300],
 						},
 						warning: {
 							main: red[800],
@@ -89,9 +90,9 @@ export default function Layout({ title, description, children }) {
 						info: {
 							main: blue[300],
 						},
-						divider: grey[200],
+						divider: grey[600],
 						background: {
-							default: grey[100],
+							default: grey[300],
 							paper: grey[200],
 						},
 						text: {
@@ -105,25 +106,25 @@ export default function Layout({ title, description, children }) {
 							main: purple[400],
 						},
 						secondary: {
-							main: green[700],
+							main: grey[700],
 						},
 						warning: {
-							main: orange[600],
+							main: orange[900],
 						},
 						info: {
-							main: blue[400],
+							main: deepOrange[400],
 						},
 						success: {
 							main: green[900],
 						},
 						divider: deepOrange[700],
 						background: {
-							default: deepOrange[600],
-							paper: deepOrange[600],
+							default: grey[700],
+							paper: grey[900],
 						},
 						text: {
-							primary: grey[300],
-							secondary: grey[400],
+							primary: green[100],
+							secondary: green[400],
 						},
 				  }),
 		},
@@ -140,18 +141,14 @@ export default function Layout({ title, description, children }) {
 				<Appbar />
 				<CssBaseline />
 				<Container
-					maxWidth='xl'
 					sx={{
 						display: 'flex',
 						flexDirection: 'column',
 						alignItems: 'center',
 						justifyContent: 'flex-start',
 						minHeight: '87.5vh',
-
-						'& > *': {
-							m: 2,
-						},
 					}}>
+					<StyledHeroBg />
 					{children}
 				</Container>
 			</ThemeProvider>

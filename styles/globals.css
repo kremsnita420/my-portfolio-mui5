@@ -6,8 +6,8 @@ body {
   font-weight: 500;
   background-size: cover;
   min-height: 100vh;
-  background-image: url('/images/space-bg.svg');
-  background-size: cover;
+
+  background: '#1a1a29' !important;
 
 
 }
@@ -25,6 +25,53 @@ h5{
 *:focus {
   outline: none;
 }
+
+
+#heroBackground{
+  height: 100vh;
+}
+
+/* SPINNING STARS */
+
+/* to left */
+#star2 #Vector_65,
+#star4 #Vector_47,
+#star6 #Vector_66
+ {
+  animation: spinLeft 30s infinite linear;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes spinLeft {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(-360deg);
+  }
+}
+
+/* to right */
+
+#star1 #Vector_49,
+#star3 #Vector_48,
+#star5 #Vector_45,
+#star7 #Vector_46 {
+  animation: spinRight 30s infinite linear;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes spinRight {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
 
 
 

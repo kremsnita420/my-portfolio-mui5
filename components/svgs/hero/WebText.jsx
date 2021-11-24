@@ -20,7 +20,7 @@ export default function HeroTextSvg() {
 
 	return (
 		<SvgIcon
-			color='warning'
+			color='primary'
 			sx={{
 				width: '70%',
 				height: '70%',

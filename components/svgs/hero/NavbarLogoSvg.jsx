@@ -6,8 +6,8 @@ export default function NavbarLogoSvg() {
 		<SvgIcon
 			color='primary'
 			sx={{
-				width: '70%',
-				height: '70%',
+				width: '60%',
+				height: '60%',
 				paddingTop: '5px',
 			}}
 			viewBox='0 0 240 120'
