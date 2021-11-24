@@ -2,7 +2,7 @@ import { useContext } from 'react'
 import Box from '@mui/material/Box'
 import Layout from '../components/layout/Layout'
 
-import { Container, Divider, Paper, Typography } from '@mui/material'
+import { Container } from '@mui/material'
 
 import HeroTextSvg from '../components/svgs/hero/HeroTextSvg'
 import WebText from '../components/svgs/hero/WebText'

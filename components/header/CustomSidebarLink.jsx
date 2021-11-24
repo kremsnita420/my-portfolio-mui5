@@ -2,7 +2,6 @@ import * as React from 'react'
 
 import { alpha, styled } from '@mui/material/styles'
 import { Button } from '@mui/material'
-import HoverUnderline from '../svgs/HoverUnderline'
 
 const StyledButton = styled(Button)(({ theme }) => ({
 	color: theme.palette.primary.main,
@@ -13,6 +12,6 @@ const StyledButton = styled(Button)(({ theme }) => ({
 	},
 }))
 
-export default function StyledButtonCustomization(props) {
+export default function StyledSidebarButton(props) {
 	return <StyledButton>{props.children}</StyledButton>
 }

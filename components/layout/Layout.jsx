@@ -18,6 +18,7 @@ import {
 	grey,
 	orange,
 	red,
+	purple,
 } from '@mui/material/colors'
 
 export default function Layout({ title, description, children }) {
@@ -32,13 +33,10 @@ export default function Layout({ title, description, children }) {
 					underline: 'none',
 				},
 			},
-			MuiButton: {
-				root: {
-					hover: {
-						'&:hover': {
-							backgroundColor: 'rgb(7, 177, 77, 0.42)',
-						},
-					},
+			MuiButtonBase: {
+				defaultProps: {
+					// The props to apply
+					disableRipple: true, // No more ripple, on the whole application
 				},
 			},
 		},
@@ -83,13 +81,13 @@ export default function Layout({ title, description, children }) {
 							main: amber[400],
 						},
 						secondary: {
-							main: grey[800],
+							main: grey[200],
 						},
 						warning: {
 							main: red[800],
 						},
 						info: {
-							main: deepOrange[100],
+							main: blue[300],
 						},
 						divider: grey[200],
 						background: {
@@ -104,7 +102,7 @@ export default function Layout({ title, description, children }) {
 				: {
 						// palette values for dark mode
 						primary: {
-							main: grey[800],
+							main: purple[400],
 						},
 						secondary: {
 							main: green[700],

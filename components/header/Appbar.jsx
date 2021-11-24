@@ -19,13 +19,16 @@ import BackArrow from '../svgs/BackArrow'
 import MenuItems from '../../data/MenuItems'
 import { Store } from '../../src/StoreProvider'
 import Cookies from 'js-cookie'
-import YellowIntruderSvg from '../svgs/YellowIntruderSvg'
-import BlackIntruderSvg from '../svgs/BlackIntruderSvg'
 import Logo from './Logo'
 import HoverUnderline from '../../components/svgs/HoverUnderline'
 
 import StyledButtonCustomization from './CustomLink'
+import StyledSidebarButton from './CustomSidebarLink'
 import HoverCrossed from '../svgs/HoverCrossed'
+import HamburgerMenu from '../svgs/HamburgerMenu'
+import SunIcon from '../svgs/SunIcon'
+import MoonIcon from '../svgs/MoonIcon'
+import NavbarLogoSvg from '../svgs/hero/NavbarLogoSvg'
 
 function Navbar() {
 	//fetch from store provider
@@ -57,37 +60,53 @@ function Navbar() {
 	}
 
 	return (
-		<AppBar sx={{ zIndex: 100 }} position='relative' color='secondary'>
-			<Container maxWidth='md'>
-				<Toolbar>
+		<AppBar sx={{ zIndex: 100 }} position='relative' color='info'>
+			<Container maxWidth='lg'>
+				<Toolbar
+					sx={{
+						display: 'flex',
+						alignItems: 'center',
+						justifyContent: 'space-between',
+					}}>
 					{/* logo */}
-					<Logo />
-
-					<Box style={{ flexGrow: '1' }} />
-
+					<Box>
+						<NavbarLogoSvg />
+					</Box>
 					{/* main navigation buttons */}
 					<Box sx={{ display: { md: 'block', xs: 'none' } }}>
 						{MenuItems.map((item) => (
 							<NextLink key={item.id} href={item.url} passHref>
 								<Link>
-									<Button>{item.label}</Button>
+									{router.pathname === item.url ? (
+										<StyledButtonCustomization>
+											{item.label}
+											<HoverCrossed />
+										</StyledButtonCustomization>
+									) : (
+										<StyledButtonCustomization>
+											{item.label}
+											<HoverUnderline />
+										</StyledButtonCustomization>
+									)}
 								</Link>
 							</NextLink>
 						))}
 					</Box>
 
 					{/* darkmode */}
-					<IconButton
-						sx={{
-							'&:hover': {
-								background: 'transparent',
-							},
-						}}
-						size='small'
-						onClick={darkModeChangeHandler}
-						color='inherit'>
-						{darkModeState ? <YellowIntruderSvg /> : <BlackIntruderSvg />}
-					</IconButton>
+					<Box>
+						<Button
+							sx={{
+								'&:hover': {
+									background: 'transparent',
+								},
+							}}
+							size='small'
+							onClick={darkModeChangeHandler}
+							color='inherit'>
+							{darkModeState ? <SunIcon /> : <MoonIcon />}
+						</Button>
+					</Box>
 
 					{/* sidebar icon toggle */}
 					<Button
@@ -105,7 +124,7 @@ function Navbar() {
 						color='primary'
 						aria-label='open drawer'
 						onClick={sidebarOpenHandler}>
-						<ArrowBackIosOutlined />
+						<HamburgerMenu />
 					</Button>
 
 					{/* sidebar drawer */}
@@ -117,7 +136,7 @@ function Navbar() {
 						open={sidebarVisible}
 						onClose={sidebarCloseHandler}>
 						<Container
-							maxWidth='xs'
+							maxWidth='sm'
 							sx={{
 								height: '100%',
 								display: 'flex',
@@ -145,15 +164,15 @@ function Navbar() {
 								<NextLink key={item.id} href={item.url} passHref>
 									<Link>
 										{router.pathname === item.url ? (
-											<StyledButtonCustomization>
+											<StyledSidebarButton>
 												{item.label}
 												<HoverCrossed />
-											</StyledButtonCustomization>
+											</StyledSidebarButton>
 										) : (
-											<StyledButtonCustomization>
+											<StyledSidebarButton>
 												{item.label}
 												<HoverUnderline />
-											</StyledButtonCustomization>
+											</StyledSidebarButton>
 										)}
 									</Link>
 								</NextLink>
