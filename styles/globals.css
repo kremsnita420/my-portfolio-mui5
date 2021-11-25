@@ -1,6 +1,7 @@
 
 
 .cards {
+  padding: 2rem;
   display: grid;
   grid-template: repeat(3, 1fr) / repeat(4, 1fr);
   gap: 10px;
@@ -75,8 +76,6 @@ body {
   font-weight: 500;
   background-size: cover;
   min-height: 100vh;
-
-  background: '#1a1a29' !important;
 
 
 }

@@ -1,5 +1,6 @@
-import { set } from 'js-cookie'
 import React, { useEffect, useState } from 'react'
+import { Paper, Button } from '@mui/material'
+import { Box } from '@mui/system'
 
 const pokemons = [
 	{
@@ -59,7 +60,7 @@ export default function App() {
 	}, [openedCard])
 
 	return (
-		<div className='App'>
+		<Paper elevation={24}>
 			<div className='cards'>
 				{pairOfPokemons.map((pokemon, index) => {
 					//lets flip the card
@@ -94,10 +95,25 @@ export default function App() {
 						</div>
 					)
 				})}
-				<button onClick={() => setOpenedCard([]) || setMatched([])}>
+			</div>
+			<Box
+				sx={{
+					width: '33%',
+					margin: 'auto',
+					display: 'flex',
+					alignItems: 'center',
+					justifyContent: 'space-around',
+					marginBottom: '2rem',
+				}}>
+				<Button
+					variant='contained'
+					color='primary'
+					onClick={() => setOpenedCard([]) || setMatched([])}>
 					Reset
-				</button>
-				<button
+				</Button>
+				<Button
+					variant='contained'
+					color='info'
 					onClick={() =>
 						setOpenedCard([
 							0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
@@ -105,8 +121,8 @@ export default function App() {
 						setMatched([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15])
 					}>
 					Show all
-				</button>
-			</div>
-		</div>
+				</Button>
+			</Box>
+		</Paper>
 	)
 }
