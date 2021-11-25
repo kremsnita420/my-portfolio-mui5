@@ -25,11 +25,10 @@
 		"next": "latest",
 		"prop-types": "latest",
 		"react": "^17.0.2",
-		"react-dom": "latest",
-		"react-material-ui-carousel": "^3.0.4",
-		"react-tsparticles": "^1.37.4"
+		"react-dom": "latest"
 	},
 	"devDependencies": {
+		"babel-plugin-styled-components": "^2.0.1",
 		"eslint": "^7.32.0",
 		"eslint-config-next": "12.0.3"
 	}

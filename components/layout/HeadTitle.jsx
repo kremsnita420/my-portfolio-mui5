@@ -2,7 +2,6 @@ import { Typography } from '@mui/material'
 import { styled } from '@mui/material/styles'
 
 const StyledHeadTitle = styled(Typography)(({ theme }) => ({
-	color: theme.palette.info.main,
 	textAlign: 'center',
 }))
 

@@ -60,11 +60,9 @@ export default function App() {
 	}, [openedCard])
 
 	return (
-		<Paper elevation={24}>
+		<Paper>
 			<div className='cards'>
 				{pairOfPokemons.map((pokemon, index) => {
-					//lets flip the card
-
 					let isFlipped = false
 
 					if (openedCard.includes(index)) isFlipped = true
@@ -105,15 +103,10 @@ export default function App() {
 					justifyContent: 'space-around',
 					marginBottom: '2rem',
 				}}>
-				<Button
-					variant='contained'
-					color='primary'
-					onClick={() => setOpenedCard([]) || setMatched([])}>
+				<Button onClick={() => setOpenedCard([]) || setMatched([])}>
 					Reset
 				</Button>
 				<Button
-					variant='contained'
-					color='info'
 					onClick={() =>
 						setOpenedCard([
 							0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,

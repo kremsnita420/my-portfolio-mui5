@@ -104,7 +104,6 @@ function Navbar() {
 									background: 'transparent',
 								},
 							}}
-							size='small'
 							onClick={darkModeChangeHandler}
 							color='inherit'>
 							{darkModeState ? <MoonIcon /> : <SunIcon />}
