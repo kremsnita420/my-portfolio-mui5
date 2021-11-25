@@ -85,7 +85,7 @@ export default function App() {
 								</div>
 								<div className='back'>
 									<img
-										src='/images/memory-game/rick-morty-title2.JPG'
+										src='/images/memory-game/rick-morty-title2.jpg'
 										alt='pokemon-name'
 										width='150'
 										height='150'
