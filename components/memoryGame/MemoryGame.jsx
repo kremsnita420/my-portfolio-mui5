@@ -5,32 +5,32 @@ const pokemons = [
 	{
 		id: 1,
 		name: 'image1',
-		image: '/images/memory-game/image-1.JPG',
+		image: '/images/memory-game/image-1.jpg',
 	},
 	{
 		id: 2,
 		name: 'image2',
-		image: '/images/memory-game/image-2.JPG',
+		image: '/images/memory-game/image-2.jpg',
 	},
 	{
 		id: 3,
 		name: 'image3',
-		image: '/images/memory-game/image-3.JPG',
+		image: '/images/memory-game/image-3.jpg',
 	},
 	{
 		id: 4,
 		name: 'image4',
-		image: '/images/memory-game/image-4.JPG',
+		image: '/images/memory-game/image-4.jpg',
 	},
 	{
 		id: 15,
 		name: 'image15',
-		image: '/images/memory-game/image-15.JPG',
+		image: '/images/memory-game/image-15.jpg',
 	},
 	{
 		id: 16,
 		name: 'image16',
-		image: '/images/memory-game/image-16.JPG',
+		image: '/images/memory-game/image-16.jpg',
 	},
 ]
 
