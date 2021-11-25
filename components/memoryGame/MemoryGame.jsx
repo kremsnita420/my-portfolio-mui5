@@ -1,3 +1,4 @@
+import { set } from 'js-cookie'
 import React, { useEffect, useState } from 'react'
 
 const pokemons = [
@@ -55,7 +56,7 @@ export default function App() {
 		}
 
 		if (openedCard.length === 2) setTimeout(() => setOpenedCard([]), 1000)
-	}, [matched, openedCard, pairOfPokemons])
+	}, [openedCard])
 
 	return (
 		<div className='App'>
@@ -93,12 +94,15 @@ export default function App() {
 						</div>
 					)
 				})}
-				<button onClick={() => setMatched([])}>Reset</button>
+				<button onClick={() => setOpenedCard([]) || setMatched([])}>
+					Reset
+				</button>
 				<button
 					onClick={() =>
 						setOpenedCard([
 							0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
-						])
+						]) ||
+						setMatched([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15])
 					}>
 					Show all
 				</button>
