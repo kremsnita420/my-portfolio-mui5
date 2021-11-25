@@ -19,7 +19,6 @@ import BackArrow from '../svgs/BackArrow'
 import MenuItems from '../../data/MenuItems'
 import { Store } from '../../src/StoreProvider'
 import Cookies from 'js-cookie'
-import Logo from './Logo'
 import HoverUnderline from '../../components/svgs/HoverUnderline'
 
 import StyledButtonCustomization from './CustomLink'

@@ -20,7 +20,7 @@ import {
 	red,
 	purple,
 } from '@mui/material/colors'
-import StyledHeroBg from '../svgs/hero/HeroBackgroundSvg'
+import StyledHeroBg from '../svgs/hero/StyledHeroBg'
 
 export default function Layout({ title, description, children }) {
 	//fetch from store provider

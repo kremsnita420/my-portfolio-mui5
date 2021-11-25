@@ -1,14 +1,15 @@
 import { Typography } from '@mui/material'
+import { styled } from '@mui/material/styles'
 
-export default function HeadTitle({ title }) {
+const StyledHeadTitle = styled(Typography)(({ theme }) => ({
+	color: theme.palette.info.main,
+	textAlign: 'center',
+}))
+
+export default function StyledHeadTitleCustmization({ title }) {
 	return (
-		<Typography
-			color='info'
-			sx={{ textAlign: 'center', margin: '2rem 0' }}
-			variant='h1'
-			component='h1'
-			gutterBottom>
+		<StyledHeadTitle variant='h1' component='h1' gutterBottom>
 			{title}
-		</Typography>
+		</StyledHeadTitle>
 	)
 }

@@ -1,6 +1,6 @@
-import * as React from 'react'
+import dynamic from 'next/dynamic'
 
-import { alpha, styled } from '@mui/material/styles'
+import { styled } from '@mui/material/styles'
 import { SvgIcon } from '@mui/material'
 
 const StyledSvg = styled(SvgIcon)(({ theme }) => ({
@@ -14,7 +14,7 @@ const StyledSvg = styled(SvgIcon)(({ theme }) => ({
 	zIndex: -1000,
 }))
 
-export default function StyledHeroBg() {
+function StyledHeroBg() {
 	return (
 		<StyledSvg
 			color='secondary'
@@ -1245,3 +1245,6 @@ export default function StyledHeroBg() {
 		</StyledSvg>
 	)
 }
+
+// MAKE RENDER ON CLIENTSIDE ONLY
+export default dynamic(() => Promise.resolve(StyledHeroBg), { ssr: false })

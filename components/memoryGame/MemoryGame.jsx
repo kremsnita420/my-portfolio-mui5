@@ -98,7 +98,7 @@ export default function App() {
 			</div>
 			<Box
 				sx={{
-					width: '33%',
+					width: '40%',
 					margin: 'auto',
 					display: 'flex',
 					alignItems: 'center',
