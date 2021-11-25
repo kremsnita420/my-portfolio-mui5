@@ -7,17 +7,21 @@ import {
 	TimelineDot,
 	TimelineOppositeContent,
 } from '@mui/lab'
-import { Paper, Typography } from '@mui/material'
+import { Paper } from '@mui/material'
 import { Box } from '@mui/system'
 
-import Layout from '../components/layout/Layout'
-import HeadTitle from '../components/layout/HeadTitle'
-import { education } from '../data/data'
+import Layout from '../../components/layout/Layout'
+import HeadTitle from '../../components/layout/HeadTitle'
+import { education } from '../../data/data'
+import MemoryGame from '../../components/memoryGame/MemoryGame'
 
 export default function SkillsPage() {
 	return (
 		<Layout title='Skills' description='Check out my skills and cetifications'>
 			<HeadTitle title='Skills' />
+
+			<MemoryGame />
+
 			<Timeline position='alternate'>
 				{education.map((single) => (
 					<TimelineItem key={single.id}>

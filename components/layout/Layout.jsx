@@ -149,6 +149,7 @@ export default function Layout({ title, description, children }) {
 						minHeight: '87.5vh',
 					}}>
 					<StyledHeroBg />
+					<StyledHeroBg />
 					{children}
 				</Container>
 			</ThemeProvider>

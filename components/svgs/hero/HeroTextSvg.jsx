@@ -26,14 +26,6 @@ export default function HeroTextSvg() {
 			pathLength: 0,
 		},
 	}
-	const thirdPathVariant = {
-		visible: {
-			opacity: 1,
-		},
-		hidden: {
-			opacity: 0,
-		},
-	}
 
 	return (
 		<SvgIcon
