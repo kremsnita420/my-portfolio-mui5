@@ -21,6 +21,10 @@ import {
 	purple,
 } from '@mui/material/colors'
 import StyledHeroBg from '../svgs/hero/StyledHeroBg'
+import { createGenerateClassName, StylesProvider } from '@mui/styles'
+const generateClassName = createGenerateClassName({
+	productionPrefix: 'c',
+})
 
 export default function Layout({ title, description, children }) {
 	//fetch from store provider
@@ -135,24 +139,27 @@ export default function Layout({ title, description, children }) {
 			<Head>
 				<title>{title ? `${title} - My Portfolio` : 'My Portfolio'}</title>
 				{description && <meta name='description' content={description} />}
+				{/* PWA primary color */}
+				<meta name='theme-color' content={theme.palette.primary.main} />
 			</Head>
-
-			<ThemeProvider theme={theme}>
-				<Appbar />
-				<CssBaseline />
-				<Container
-					sx={{
-						display: 'flex',
-						flexDirection: 'column',
-						alignItems: 'center',
-						justifyContent: 'flex-start',
-						minHeight: '87.5vh',
-					}}>
-					<StyledHeroBg />
-					<StyledHeroBg />
-					{children}
-				</Container>
-			</ThemeProvider>
+			<StylesProvider generateClassName={generateClassName}>
+				<ThemeProvider theme={theme}>
+					<Appbar />
+					<CssBaseline />
+					<Container
+						sx={{
+							display: 'flex',
+							flexDirection: 'column',
+							alignItems: 'center',
+							justifyContent: 'flex-start',
+							minHeight: '87.5vh',
+						}}>
+						<StyledHeroBg />
+						<StyledHeroBg />
+						{children}
+					</Container>
+				</ThemeProvider>
+			</StylesProvider>
 		</>
 	)
 }

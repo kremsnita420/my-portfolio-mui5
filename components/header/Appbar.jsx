@@ -1,26 +1,14 @@
 import { useContext, useEffect, useState } from 'react'
 import dynamic from 'next/dynamic'
 import NextLink from 'next/link'
-import { Box } from '@mui/system'
 import { useRouter } from 'next/router'
-import {
-	AppBar,
-	Button,
-	Container,
-	Drawer,
-	IconButton,
-	Link,
-	SvgIcon,
-	Toolbar,
-	Typography,
-} from '@mui/material'
-import { ArrowBackIosOutlined } from '@mui/icons-material'
-import BackArrow from '../svgs/BackArrow'
+import { Box } from '@mui/system'
+import { AppBar, Button, Container, Drawer, Link, Toolbar } from '@mui/material'
+
 import MenuItems from '../../data/MenuItems'
 import { Store } from '../../src/StoreProvider'
-import Cookies from 'js-cookie'
+import BackArrow from '../svgs/BackArrow'
 import HoverUnderline from '../../components/svgs/HoverUnderline'
-
 import StyledButtonCustomization from './CustomLink'
 import StyledSidebarButton from './CustomSidebarLink'
 import HoverCrossed from '../svgs/HoverCrossed'
@@ -29,7 +17,7 @@ import SunIcon from '../svgs/SunIcon'
 import MoonIcon from '../svgs/MoonIcon'
 import NavbarLogoSvg from '../svgs/hero/NavbarLogoSvg'
 
-function Navbar() {
+export default function Navbar() {
 	//fetch from store provider
 	const { state, dispatch } = useContext(Store)
 	const { darkMode } = state
@@ -44,7 +32,9 @@ function Navbar() {
 		dispatch({ type: darkMode ? 'DARK_MODE_OFF' : 'DARK_MODE_ON' })
 		const newDarkMode = !darkMode
 		setDarkModeState(newDarkMode)
-		Cookies.set('darkMode', newDarkMode ? 'ON' : 'OFF')
+		if (typeof window !== 'undefined') {
+			localStorage.setItem('darkMode', newDarkMode ? 'ON' : 'OFF')
+		}
 	}
 	useEffect(() => {
 		setDarkModeState(darkMode)
@@ -188,4 +178,4 @@ function Navbar() {
 }
 
 // MAKE CART RENDER ON CLIENTSIDE
-export default dynamic(() => Promise.resolve(Navbar), { ssr: false })
+//export default dynamic(() => Promise.resolve(Navbar), { ssr: false })

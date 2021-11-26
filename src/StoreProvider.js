@@ -1,12 +1,11 @@
-import Cookies from "js-cookie"
+
 import { createContext, useReducer } from "react"
 
 export const Store = createContext()
 
 //initial states
 const initialState = {
-    darkMode: Cookies.get('darkMode') === 'ON' ? true : false,
-    activeLink: Cookies.get('activeLink') === 'ON' ? true : false,
+    darkMode: typeof window !== 'undefined' && localStorage.getItem('darkMode') === 'ON' ? true : false,
 }
 
 //define reducer
